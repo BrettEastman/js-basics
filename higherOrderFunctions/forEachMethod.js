@@ -1,6 +1,24 @@
 // forEach is a method that loops over an array and takes a callback function with three parameters: element, index, array
+// forEach doesn't return anything. For example, if you want to return a new array, you need to build a new array, or if you want to return a sum you need to start with a sum variable outside of the forEach method.
 
-function squareSum(numbers) {
+
+// leetcode problem: Given an array nums. We define a running sum of an array as runningSum[i] = sum(nums[0]…nums[i]). Return the running sum of nums.
+var runningSum = function(nums) {
+    let sums = [];
+    let currSum = 0;
+    nums.forEach((num) => {
+      currSum += num;
+      sums.push(currSum);
+    })
+    return sums;
+  }
+  
+  console.log(runningSum([1,2,3,4]))
+  // Output: [1,3,6,10]
+  
+  
+  // Julie example:
+  function squareSum(numbers) {
     var result = 0;
     numbers.forEach(function(number, i, numArray){
       console.log('number', number)

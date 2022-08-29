@@ -1,6 +1,14 @@
 // reduce is a method that loops over an array and takes a callback function with four parameters: accumulator(your answer), element, index, array
 // mdn refers to the four parameters as: (previousValue, currentValue, currentIndex, array)
 
+/*
+Or another interpretation of the four parameters
+a: accumulator
+c: current value
+i: index
+arr: source array
+*/
+
 //here is an example to show what everything looks like:
 function squareSum(numbers) {
     return numbers.reduce(function(squareSum, number, index, numArray) {
@@ -121,5 +129,19 @@ function squareSum(numbers) {
   // #2 - INLINE CALLBACK FUNCTION: The parameters are passed inside the function inside reduce() method along with the array that is to be executed. Syntax:
   
   reduce(function(returnValue, currentValue, currentIndex, array) { /* … */}, initialValue)
+
+
+  // Codesmith rewritten version of reduce:
+function reduce(array, callback, initialValue) {
+    let a = initialValue;
+    for (let i = 0; i < array.length; i++) {
+      a = callback(a, array[i])
+    }
+    return a;
+  }
+  
+  const nums = [4, 1, 3];
+  const add = function(a, b) { return a + b; }
+  console.log(reduce(nums, add, 0)); // should log 8
   
   

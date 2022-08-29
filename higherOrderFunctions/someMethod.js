@@ -11,27 +11,6 @@ console.log(array.some(even));
 // expected output: true
 
 
-// Different ways to write functions in JS
-// anonymous function assigned to a variable with keyword function
-var even1 = function(element) {
-  return element % 2 === 0;
-}
-// named function
-function even2(element) {
-  return element % 2 === 0;
-}
-// arrow function v1
-var even3 = (element) => element % 2 === 0;
-// don't need the parens around the parameter
-var even4 = element => element % 2 === 0;
-// need parens around params if none
-var something = () => console.log('hi')
-// arrow function with a return
-var even5 = (element) => {
-  return element % 2 === 0; 
-}
-
-
   
 // Julie messing around example:
 
