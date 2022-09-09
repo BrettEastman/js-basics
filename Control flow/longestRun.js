@@ -18,8 +18,8 @@ function longestRun(arr) {
     } else {
       // push count to resultCounts
       resultCounts.push(currentCount);
-      // currentCount = 0
-      currentCount = 0;
+      // currentCount = 1
+      currentCount = 1;
     }
   }
   // create highest count var set to result[0]
