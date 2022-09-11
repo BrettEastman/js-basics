@@ -29,6 +29,32 @@ const data = {
 // output: number(average for all cities)
 
 //FUNCTION:
+// my solution in Sept:
+function averageForAll(object) {
+  // create tempsArr
+  var tempsArr = [];
+  // access temp of each city and add it, as a number, to the tempsArr
+  var citiesArr = data.cities;
+  for (var i = 0; i < citiesArr.length; i++) {
+    var currentCityObj = citiesArr[i]
+    var currCity;
+    for (key in currentCityObj) {
+      if (currentCityObj[currCity] === undefined) {
+        currCity = key;
+      }
+    }
+    tempsArr.push(Number(currentCityObj[currCity].average))
+    // console.log(tempsArr)
+  }
+  // get average through adding values and dividing by tempsArr length
+  var sum = 0;
+  for (var j = 0; j < tempsArr.length; j++) {
+    sum += tempsArr[j];
+  }
+  return sum / tempsArr.length;
+}
+
+// my solution in Aug:
 function averageForAll(object) {
 //create temperature array
 var temperature = [];
