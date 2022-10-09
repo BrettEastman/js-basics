@@ -133,3 +133,24 @@ var runningSum = function(nums) {
   forEach(['a','b','c'], i => console.log(i)); // should log: 'a', 'b', 'c'
   console.log(typeof map); // should log: 'function'
   console.log(map([3,4,5], n => n - 2)); // should log: [1, 2, 3]
+
+// HR precourse examples:
+//example 1:
+var x13sLunchesPerDay = ['🍪', '🍪', '🍪', '🍪', '🍪', '🍪', '🍪'];
+// x13 decides to double up on cookies for each lunch for this week
+x13sLunchesPerDay.forEach(function(element, i, array) {
+    x13sLunchesPerDay[i] += '🍪';
+});
+  
+x13sLunchesPerDay; // ['🍪🍪', '🍪🍪', '🍪🍪', '🍪🍪', '🍪🍪', '🍪🍪', '🍪🍪'];
+
+//example 2:
+// for next week, he wants to cut down on his consumption
+// and decides to half his daily portions back to a single cookie
+x13sLunchesPerDay.forEach(function(element, i, array) {
+    if (i % 2 === 0) {
+        x13sLunchesPerDay[i] += '🍪';
+    }
+});
+
+x13sLunchesPerDay; // ['🍪🍪', '🍪', '🍪🍪', '🍪', '🍪🍪', '🍪', '🍪🍪']
