@@ -28,20 +28,20 @@ console.log(flatten([1, 2, [3, [[4]]], 5]));
 
 // flatten using pure recursion:
 var flattenR = function(input) {
-  // Declare a rsult array
+  // Declare a result array
   var result = [];
 
   //If the input is not an array
   if (!Array.isArray(input)) {
     // BASECASE
+    return input;
   }
 
   // Iterate through the input array
   input.forEach(function(item) {
-    // Invoke the recursive function (and propababbly STEP 5 accumulate the result)
+    // Invoke the recursive function (and probabably STEP 5 accumulate the result)
     result = result.concat(flattenR(item));
   });
   return result;
 }
 
-console.log(flattenR([1, 2, [3, [[4]]], 5]));
