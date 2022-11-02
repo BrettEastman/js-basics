@@ -1,4 +1,6 @@
-// The map() method creates a new array populated with the results of calling a provided function on every element in the calling array. map calls a provided callbackFn function once for each element in an array, in order, and constructs a new array from the results. callbackFn is invoked only for indexes of the array which have assigned values (including undefined).
+// The map() method creates a new array populated with the results of calling a provided function on every element in the calling array.
+// map calls a provided callbackFn function once for each element in an array, in order, and constructs a new array from the results.
+// callbackFn is invoked only for indexes of the array which have assigned values (including undefined).
 
 //--> Map translates data from one type to another. Doesn’t necessarily mean that the data type changes - but you are changing from one form to another.
 //--> Map will always return a collection the same size and order as its input. If you map an array of 3 things, you will get an array of 3 elements back, and the first item in the input will always correspond with the first item of the output.
@@ -16,7 +18,7 @@ var data = [
 ];
 
 data.map(function(item) {
-    return item.firstName + " " + item.lastName + " <" + item.email + ">"; 
+    return item.firstName + " " + item.lastName + " <" + item.email + ">";
 });
 //["Ryan Guill <ryanguill@gmail.com>", "John Doe <johndoe@example.com>", "Mary Smith <marysmith@example.com>"]
 
@@ -94,3 +96,13 @@ function subtractTwo(num) {
 console.log(typeof subtractTwo); // should log: 'function'
 console.log(typeof map); // should log: 'function'
 console.log(map([3,4,5], subtractTwo)); // should log: [ 1, 2, 3 ]
+
+
+// HR precourse example:
+var x13sCookies = ['🍪', '🍪', '🍪', '🍪', '🍪', '🍪', '🍪'];
+
+var doubleCookies = x13sCookies.map(function(element, index, array) {
+    return x13sCookies[index] += '🍪';
+});
+
+console.log(doubleCookies); // ['🍪🍪', '🍪🍪', '🍪🍪', '🍪🍪', '🍪🍪', '🍪🍪', '🍪🍪'];
