@@ -1,6 +1,34 @@
 // forEach is a method that loops over an array and takes a callback function with three parameters: element, index, array
 // forEach doesn't return anything. For example, if you want to return a new array, you need to build a new array, or if you want to return a sum you need to start with a sum variable outside of the forEach method.
 
+// HackReactor quiz example:
+var githubStickers = [
+  {
+    name: "Octocat",
+    qty: 12
+  },
+  {
+    name: "Luchadortocat",
+    qty: 2
+  },
+  {
+    name: "Gracehoppertocat",
+    qty: 5
+  }
+]
+
+var hofFunction = function(array) {
+  var stickerArr = [];
+  githubStickers.forEach(function(item, i, collection) {
+    if (item.qty < 5) {
+      stickerArr.push(item);
+    }
+  });
+  return stickerArr;
+}
+
+console.log(hofFunction(githubStickers));
+
 
 // leetcode problem: Given an array nums. We define a running sum of an array as runningSum[i] = sum(nums[0]…nums[i]). Return the running sum of nums.
 var runningSum = function(nums) {
@@ -12,11 +40,11 @@ var runningSum = function(nums) {
     })
     return sums;
   }
-  
+
   console.log(runningSum([1,2,3,4]))
   // Output: [1,3,6,10]
-  
-  
+
+
   // Julie example:
   function squareSum(numbers) {
     var result = 0;
@@ -28,9 +56,9 @@ var runningSum = function(nums) {
     })
     return result;
   }
-  
+
   squareSum([46, 687, -3, 1000, 5])
-  // --> 
+  // -->
   /*
   number 46
   i 0
@@ -53,8 +81,8 @@ var runningSum = function(nums) {
   numArray [ 46, 687, -3, 1000, 5 ]
   --------- next loop ---------
   */
-  
-  
+
+
   //Example from Codesmith prep course:
   function droids(arr) {
     let result = '';
@@ -67,12 +95,12 @@ var runningSum = function(nums) {
     })
     return result;
   }
-  
-  const starWars = ["Luke", "Finn", "Rey", "Kylo", "Droids"] 
-  const thrones = ["Jon", "Danny", "Tyrion", "The Mountain", "Cersei"] 
+
+  const starWars = ["Luke", "Finn", "Rey", "Kylo", "Droids"]
+  const thrones = ["Jon", "Danny", "Tyrion", "The Mountain", "Cersei"]
   console.log(droids(starWars)) // should log: "Found Droids!"
   console.log(droids(thrones)) //should log: "These are not the droids you're looking for."
-  
+
   // here is what the above example would look like with a regular for loop:
   function droids(arr) {
     let result = '';
@@ -85,9 +113,9 @@ var runningSum = function(nums) {
     }
     return result;
   }
-  
-  
-  
+
+
+
   // other example:
   function squareSum(numbers) {
     var result = 0;
@@ -96,10 +124,10 @@ var runningSum = function(nums) {
     })
     return result;
   }
-  
-  console.log(squareSum([46, 687, -3, 1000, 5])); //1474119 
+
+  console.log(squareSum([46, 687, -3, 1000, 5])); //1474119
   console.log(squareSum([1, 2, 3, 4])); // 30
-  
+
   // with an arrow function
   function squareSum(numbers) {
     var result = 0;
@@ -108,27 +136,27 @@ var runningSum = function(nums) {
     })
     return result;
   }
-  
-  
+
+
   // from Codesmith, a recreated version of forEach in a standard, declared function. It makes use of another recreated version of map.
-  
+
   function forEach(arr, callback) {
     for (let i = 0; i < arr.length; i++) {
       callback(arr[i]);
     }
   }
-  
+
   function map(arr, call) {
     //initialize new array
     let result = [];
     //call forEach with the passed in array, and a new function that will take in an array element.
     forEach(arr, function(element) {
       //invoke the passed in callback function with the current array element given to us by forEach
-      result.push(call(element))    
+      result.push(call(element))
     })
     return result;
   }
-  
+
   console.log(typeof forEach); // should log: 'function'
   forEach(['a','b','c'], i => console.log(i)); // should log: 'a', 'b', 'c'
   console.log(typeof map); // should log: 'function'
@@ -141,7 +169,7 @@ var x13sLunchesPerDay = ['🍪', '🍪', '🍪', '🍪', '🍪', '🍪', '🍪']
 x13sLunchesPerDay.forEach(function(element, i, array) {
     x13sLunchesPerDay[i] += '🍪';
 });
-  
+
 x13sLunchesPerDay; // ['🍪🍪', '🍪🍪', '🍪🍪', '🍪🍪', '🍪🍪', '🍪🍪', '🍪🍪'];
 
 //example 2:
