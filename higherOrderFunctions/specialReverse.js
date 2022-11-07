@@ -4,6 +4,7 @@
 // Reverse the words themselves, not the entire sentence.
 // All characters in the sentence will be in lower case.
 
+// my solution:
 function specialReverse(s, c) {
   var sArr = s.split(' ');
   var result = sArr.map(function(item, i, array) {
@@ -15,6 +16,11 @@ function specialReverse(s, c) {
     }
   });
   return result.join(' ');
+}
+
+// top solution:
+function specialReverse(s, c) {
+	return s.split(' ').map(x => x.startsWith(c) ? x.split('').reverse().join('') : x).join(' ')
 }
 
 // Examples
