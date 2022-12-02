@@ -25,6 +25,7 @@ var hofFunction = function(array) {
 }
 
 console.log(hofFunction(githubStickers));
+// [ { name: 'Luchadortocat', qty: 2 } ]
 
 // other example:
 var x13sStorage = ['🛢️', '🔋', '🍪', '🛢️', '🔋', '🛢️', '🍪', '🍪'];
