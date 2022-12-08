@@ -2,6 +2,7 @@
 // Notes
 // Keep the order of the un-moved items the same.
 
+// My solution:
 function moveToEnd(arr, el) {
   var arr1 = [];
   var arr2 = [];
@@ -13,6 +14,21 @@ function moveToEnd(arr, el) {
     }
   });
   return arr1.concat(arr2);
+}
+
+// other top Edabit solutions:
+function moveToEnd(arr, el) {
+	return arr.sort((a) => a == el ? 1: -1)
+}
+
+function moveToEnd(arr, el) {
+	return arr.filter(x => x != el).concat(arr.filter(x => x == el));
+}
+
+function moveToEnd(arr, el) {
+	const allEl = arr.filter(elem => elem === el);
+	const noEl = arr.filter(elem => elem != el);
+    return noEl.concat(allEl);
 }
 
 // Examples

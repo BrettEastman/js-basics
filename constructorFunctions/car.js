@@ -41,6 +41,13 @@ Car.prototype.move = function() {this.loc++};
 var amy = new Car(1);
 amy.move();
 
+// There is also the Functional Class version, which has its own advantages and drawbacks. It is good for clarity, since everything is all-in-one:
+var Car = function(loc) {
+  var obj = {loc:loc};
+  obj.move = function() {this.loc++;};
+  return obj;
+}
+
 
 // Another pseudoclassical class example:
 function Car(color, type) {

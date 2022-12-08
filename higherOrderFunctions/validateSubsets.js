@@ -26,7 +26,7 @@ function validateSubsets(subsets, set) {
 }
 
 
-
+// Tests:
 console.log(validateSubsets([[1, 2], [2, 3], [1, 3]], [1, 2, 3])) // ➞ true
 
 console.log(validateSubsets([[1, 2, 3], [2], [3], []], [1, 2, 3])) // ➞ true
