@@ -20,7 +20,7 @@ function getNthFib(n, memoize = {1: 0, 2: 1}) {
   }
 }
 
-// Algoexpert recursive solution #3
+// Algoexpert solution #3
 function getNthFib(n) {
   const lastTwo = [0,1];
   let counter = 3;
@@ -36,11 +36,11 @@ function getNthFib(n) {
 console.log(getNthFib(6)); // 5
 
 
-// Non-recursive version:
-// function getNthFib(n) {
-//   var fibArray = [0, 1];
-//   for (var i = 2; i < n; i++) {
-//     fibArray.push(fibArray[i - 1] + fibArray[i - 2]);
-//   }
-//   return fibArray[n - 1]
-// }
+// Other non-recursive version:
+function getNthFib(n) {
+  var fibArray = [0, 1];
+  for (var i = 2; i < n; i++) {
+    fibArray.push(fibArray[i - 1] + fibArray[i - 2]);
+  }
+  return fibArray[n - 1]
+}
