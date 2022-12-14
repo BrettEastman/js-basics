@@ -21,4 +21,4 @@ function solution(string) {
     return charCodes;
 }
 
-console.log(solution(inputString));
+console.log(solution(inputString)); //[ 100, 111, 103 ]
