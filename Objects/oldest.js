@@ -10,7 +10,7 @@ function oldest(people) {
 	var oldest;
 	for (var key in people) {
 		if (oldest === undefined) {
-			oldest = key; 
+			oldest = key;
 		}
 		if (people[oldest] < people[key]) {
 		  oldest = key;
