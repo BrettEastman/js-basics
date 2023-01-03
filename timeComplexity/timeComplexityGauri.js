@@ -1,6 +1,6 @@
 let n = 10;
 
-// O(n)
+// O(n) - Linear
 let ctr1 = 0;
 for (let i = 0; i < 3; i++) {
   for (let j = 0; j < n; j++) {
@@ -9,7 +9,7 @@ for (let i = 0; i < 3; i++) {
 }
 console.log(ctr1);  // 30
 
-// O( n*log(n))
+// O( n*log(n)) - Log-linear
 let ctr2 = 0;
 for (let i = 0; i < n; i++) {       // linear: O(n)
   for (let j = 1; j < n; j *= 2) {  // logarithmic: O(log(n))
@@ -18,7 +18,7 @@ for (let i = 0; i < n; i++) {       // linear: O(n)
 }
 console.log(ctr2);  // 40
 
-// O(n^2)
+// O(n^2) - Quadratic
 let ctr3 = 0;
 for (let i = 0; i < n; i++) {
   for (let j = 0; j < n; j++) {
@@ -27,7 +27,7 @@ for (let i = 0; i < n; i++) {
 }
 console.log(ctr3); // 100
 
-// O(2^n)
+// O(2^n) - Exponential
 let ctr4 = 0;
 function recursive(n) {
   ctr4++;
