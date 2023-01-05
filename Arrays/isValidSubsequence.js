@@ -1,5 +1,18 @@
 // Give two non-empty arrays of integers, determine if the 2nd is a subsequence of the first. A subsequence of an array is a set of numbers that aren't necessarily adjacent in the array, but are in the same order as they appear in the array. Note that a single number in an array and the array itself are both valid subsequences of the array.
 
+// my re-try the following day:
+function isValidSubsequence(array, sequence) {
+  var arrInd = 0;
+  var seqInd = 0;
+  while (arrInd < array.length) {
+    if (sequence[seqInd] === array[arrInd]) {
+      seqInd++;
+    }
+    arrInd++;
+  }
+  return seqInd === sequence.length;
+}
+
 // their version:
 function isValidSubsequence(array, sequence) {
   let arrInd = 0;
