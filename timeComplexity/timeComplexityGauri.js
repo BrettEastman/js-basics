@@ -2,7 +2,7 @@ let n = 10;
 
 // O(n) - Linear
 let ctr1 = 0;
-for (let i = 0; i < 3; i++) {
+for (let i = 0; i < 3; i++) { // this for loop is always the same number of operations, so it does not grow with n, it is constant
   for (let j = 0; j < n; j++) {
     ctr1++;
   }
@@ -21,7 +21,7 @@ console.log(ctr2);  // 40
 // O(n^2) - Quadratic
 let ctr3 = 0;
 for (let i = 0; i < n; i++) {
-  for (let j = 0; j < n; j++) {
+  for (let j = 0; j < n; j++) { // both loops grow in the number of operations as n gets larger, so it's an n * n time complexity
     ctr3++;
   }
 }
